@@ -6,37 +6,37 @@ const Image = {
 
 export default Image;
 
-import Tools1 from "/assets/tools/vscode.png";
-import Tools2 from "/assets/tools/reactjs.png";
-import Tools3 from "/assets/tools/nextjs.png";
+import Tools1 from "/assets/tools/laravel.webp";
+import Tools2 from "/assets/tools/codeigniter.webp";
+import Tools3 from "/assets/tools/reactjs.png";
 import Tools4 from "/assets/tools/tailwind.png";
 import Tools5 from "/assets/tools/bootstrap.png";
 import Tools6 from "/assets/tools/js.png";
 import Tools7 from "/assets/tools/nodejs.png";
 import Tools8 from "/assets/tools/github.png";
 import Tools9 from "/assets/tools/ai.png";
-import Tools10 from "/assets/tools/canva.png";
-import Tools11 from "/assets/tools/figma.png";
+import Tools10 from "/assets/tools/canva.webp";
+import Tools11 from "/assets/tools/figma.webp";
 
 export const listTools = [
   {
     id: 1,
     gambar: Tools1,
-    nama: "Visual Studio Code",
-    ket: "Code Editor",
+    nama: "Laravel",
+    ket: "Framework PHP",
     dad: "100",
   },
   {
     id: 2,
     gambar: Tools2,
-    nama: "React JS",
-    ket: "Framework",
+    nama: "Codeigniter",
+    ket: "Framework PHP",
     dad: "200",
   },
   {
     id: 3,
     gambar: Tools3,
-    nama: "Next JS",
+    nama: "React JS",
     ket: "Framework",
     dad: "300",
   },

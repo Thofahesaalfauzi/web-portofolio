@@ -7,118 +7,137 @@ const tahunMulai = 2022;
 const tahunSekarang = new Date().getFullYear();
 const tahunPengalaman = tahunSekarang - tahunMulai;
 
+const emailKontak = "thofahesaal@gmail.com";
+
+const fokus =
+  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFC83D]";
+
+const inputCls =
+  "w-full rounded-lg border border-[#263754] bg-[#16233A] px-4 py-3 text-[#E8EEF7] placeholder:text-[#9AA9C2] focus:border-[#FFC83D] focus:outline-none focus:ring-2 focus:ring-[#FFC83D]/40";
 
 function App() {
   return (
-    <>
-      {/* Konten hero */}
-      <div className="container mx-auto px-4 ">
-        <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1 ">
-          <div className="pr-4 md:pl-24 md:pr-8 max-w-screen-xl mx-auto">
-            <div className="animate__animated animate__fadeInUp animate__delay-3s">
-              <div
-                className="flex items-center gap-2 px-4 py-2 mb-6 w-fit 
-                rounded-full border border-white/30 
-                bg-white/10 backdrop-blur-md 
-                shadow-sm hover:bg-white/20 transition"
-              >
-                <i className="ri-briefcase-line text-white text-lg"></i>
-                <p className="font-medium text-white text-sm">
-                  I`m Ready For Job Web Development
-                </p>
-              </div>
+    <div className="bg-[#0D1330] text-slate-100">
+      {/* Hero */}
+      <section id="beranda" className="relative isolate overflow-hidden">
+        {/* Cahaya latar di belakang Lanyard */}
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute -right-24 top-10 h-[480px] w-[480px] rounded-full bg-indigo-500/20 blur-[120px]" />
+          <div className="absolute left-0 bottom-0 h-[320px] w-[320px] rounded-full bg-amber-400/10 blur-[110px]" />
+        </div>
 
-              <h1 className="text-5xl/tight font-bold">
-                I`m, Thofa Hesa Alfauzi
-              </h1>
-              <h1 className="text-5xl font-bold mb-6 text-yellow-300">
-                <Typewriter
-                  words={["Full Stack Developer", "UI / UX Design"]}
-                  loop={0}
-                  cursor
-                  typeSpeed={80}
-                  deleteSpeed={70}
-                  delaySpeed={1500}
-                />
-              </h1>
-              <p className="mb-6 opacity-90">
-                Saya mempunyai ketertarikan dalam bidang Programming dan
-                Designer, terutama pada pembuatan Website dan Desain seperti
-                Poster, Pamflet serta Banner, ketertarikan pada bidang ini sudah
-                berlangsung lebih dari 4 Tahun untuk semua Bidang.
-              </p>
-              <div className="flex items-center sm:gap-4 gap-2">
-                <a
-                  href=""
-                  className="bg-yellow-400 text-black p-4 rounded-2xl hover:bg-yellow-500"
-                >
-                  <i className="ri-download-line ri-lg mr-2"></i>Download CV
-                </a>
-                <a
-                  href="#proyek"
-                  className="bg-transparent p-3 rounded-2xl hover:bg-yellow-500 hover:text-black border-2 border-yellow-400"
-                >
-                  <i className="ri-folder-open-line ri-lg mr-2"></i>Lihat Proyek
-                </a>
+        <div className="container mx-auto px-4">
+          <div className="hero grid grid-cols-1 items-center gap-6 pt-24 md:grid-cols-2 xl:gap-0">
+            <div className="mx-auto max-w-screen-xl pr-4 md:pl-16 md:pr-8 md:-translate-y-16 xl:-translate-y-14">
+              <div className="animate__animated animate__fadeInUp animate__delay-3s">
+                <div className="mb-6 flex w-fit items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 backdrop-blur-md">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-300 opacity-70" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-teal-300" />
+                  </span>
+                  <p className="text-sm font-medium text-slate-200">
+                    I am Ready For Job Web Development
+                  </p>
+                </div>
+
+                <p className="mb-2 text-lg text-slate-400">Halo, I am</p>
+                <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+                  Thofa Hesa Alfauzi
+                </h1>
+                <h2 className="mb-6 mt-2 text-3xl font-bold text-amber-300 sm:text-4xl">
+                  <Typewriter
+                    words={["PHP Developer", "Network Engineering", "IT Infrastruktur"]}
+                    loop={0}
+                    cursor
+                    typeSpeed={80}
+                    deleteSpeed={70}
+                    delaySpeed={1500}
+                  />
+                </h2>
+                <p className="mb-8 max-w-xl leading-relaxed text-slate-300">
+                  Saya memiliki ketertarikan di bidang pemrograman PHP, jaringan
+                  komputer, dan infrastruktur IT. Saya terus mempelajari dan
+                  mengembangkan kemampuan di bidang pengembangan website,
+                  konfigurasi jaringan, serta pengelolaan perangkat dan sistem
+                  IT.
+                </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="/cv.pdf"
+                    download
+                    className="inline-flex items-center rounded-2xl bg-amber-400 px-6 py-3.5 font-semibold text-[#0D1330] shadow-lg shadow-amber-400/20 transition hover:bg-amber-300"
+                  >
+                    <i className="ri-download-line ri-lg mr-2"></i>Download CV
+                  </a>
+                  <a
+                    href="#proyek"
+                    className="inline-flex items-center rounded-2xl border border-white/25 px-6 py-3.5 font-semibold text-white transition hover:border-amber-300 hover:text-amber-300"
+                  >
+                    <i className="ri-folder-open-line ri-lg mr-2"></i>Lihat
+                    Proyek
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] mx-auto min-h-[350px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center">
-            <Lanyard position={[0, 0, 15]} gravity={[0, -40, 10]} />
+            <div className="mx-auto flex min-h-[350px] w-[250px] items-center justify-center sm:min-h-[500px] sm:w-[350px] md:min-h-[600px] md:w-[450px] md:-translate-y-12 lg:min-h-[700px] lg:w-[550px] xl:min-h-[800px] xl:w-[650px] xl:-translate-y-20">
+              <Lanyard position={[0, 0, 15]} gravity={[0, -40, 10]} />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Tentang */}
-      <div className="tentang py-10 scroll-mt-24 bg-white" id="tentang">
+      <section className="tentang scroll-mt-24 bg-[#EEF2FA] py-20" id="tentang">
         <div className="container mx-auto px-4">
           <div
-            className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg"
+            className="mx-auto w-full rounded-3xl bg-[#0D1330] p-8 shadow-xl shadow-indigo-900/10 lg:w-3/4 xl:w-2/3 sm:p-10"
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <p className="text-base/loose mb-10">
+            <p className="mb-10 text-lg leading-loose text-slate-300">
               Hi, perkenalkan saya Thofa Hesa Alfauzi, seorang Full Stack Web
               Developer dan Designer untuk UI/UX Design, Saya percaya bahwa
               desain dan fungsionalitas harus berjalan beriringan, sehingga
               setiap proyek yang saya kembangkan tidak hanya terlihat menarik
               tetapi juga memberikan pengalaman pengguna yang optimal.
             </p>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between border-t border-white/10 pt-8">
               <img
                 src={DataImage.HeroImage}
-                alt="Image"
-                className="w-12 rounded-md sm:block hidden"
+                alt="Foto Thofa Hesa Alfauzi"
+                className="hidden w-14 rounded-xl ring-2 ring-amber-300/60 sm:block"
                 loading="lazy"
               />
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-10">
                 <div>
-                  <h1 className="text-4xl mb-1">
-                    {listProyek.length} <span className="text-blue-600">+</span>
-                  </h1>
-                  <p>Proyek Selesai</p>
+                  <h3 className="mb-1 text-4xl font-bold text-white">
+                    {listProyek.length}
+                    <span className="text-amber-300">+</span>
+                  </h3>
+                  <p className="text-slate-400">Proyek Selesai</p>
                 </div>
-                <div>
-                  <h1 className="text-4xl mb-1">
-                    {tahunPengalaman} <span className="text-blue-600">+</span>
-                  </h1>
-                  <p>Tahun Pengalaman</p>
+                <div className="border-l border-white/10 pl-10">
+                  <h3 className="mb-1 text-4xl font-bold text-white">
+                    {tahunPengalaman}
+                    <span className="text-teal-300">+</span>
+                  </h3>
+                  <p className="text-slate-400">Tahun Pengalaman</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="tools mt-32 text-black">
-            <h1
-              className="text-4xl/snug font-bold mb-4"
+          <div className="tools mt-28">
+            <h2
+              className="mb-4 text-4xl font-bold leading-snug text-[#0D1330]"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
               Tools yang dipakai
-            </h1>
+            </h2>
             <p
-              className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-70"
+              className="w-full leading-loose text-slate-600 sm:w-3/4 md:w-2/3 lg:w-2/4 xl:w-2/5"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="300"
@@ -126,13 +145,10 @@ function App() {
               Berikut ini beberapa tools yang biasa saya pakai untuk pembuatan
               Website maupun Design
             </p>
-            <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+            <div className="tools-box mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {listTools.map((tool) => (
                 <div
-                  className="flex items-center gap-3 p-4 border border-zinc-600 rounded-xl
-                bg-zinc-800 hover:bg-gradient-to-br from-blue-500/10 to-blue-300/10
-                hover:border-blue-400/30 transition-all duration-300 ease-in-out 
-                shadow-sm hover:shadow-blue-500/20 text-white transform hover:scale-[1.02] group"
+                  className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-teal-400/60 hover:shadow-lg hover:shadow-teal-500/10"
                   key={tool.id}
                   data-aos="fade-up"
                   data-aos-duration="1000"
@@ -140,155 +156,166 @@ function App() {
                 >
                   <img
                     src={tool.gambar}
-                    alt="Tools Image"
-                    className="w-14 bg-zinc-900 p-2 rounded-md group-hover:scale-105 transition-all duration-300"
+                    alt={tool.nama}
+                    className="w-14 rounded-xl bg-slate-100 p-2 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div>
-                    <h4 className="font-bold text-white">{tool.nama}</h4>
-                    <p className="opacity-60 text-sm">{tool.ket}</p>
+                    <h4 className="font-bold text-[#0D1330]">{tool.nama}</h4>
+                    <p className="text-sm text-slate-500">{tool.ket}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </div>
-      {/* Tentang */}
+      </section>
 
-      {/* Proyek */}
-      <div className="proyek py-10 scroll-mt-18" id="proyek">
-        <div className="container mx-auto px-4 ">
-          <h1
-            className="text-center text-4xl font-bold mb-2"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            Proyek
-          </h1>
-          <p
-            className="text-base/loose text-center opacity-70"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-          >
-            Berikut ini beberapa proyek yang telah saya buat.
-          </p>
-          <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-            {listProyek.map((proyek) => (
-              <div
-                key={proyek.id}
-                className="p-4 bg-zinc-800 rounded-md"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={proyek.dad}
-              >
-                <img src={proyek.gambar} alt="Proyek Image" loading="lazy" />
-                <div>
-                  <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
-                  <p className="text-base/loose mb-4">{proyek.desk}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {proyek.tools.map((tool, index) => (
-                      <p
-                        className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold"
-                        key={index}
-                      >
-                        {tool}
-                      </p>
-                    ))}
-                  </div>
-                  <div className="mt-8 text-center">
+      {/* Proyek (gaya paste 2) */}
+      <section id="proyek" className="scroll-mt-24 py-24">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="mb-3 text-3xl font-bold md:text-4xl">Proyek</h2>
+            <p className="max-w-xl leading-relaxed text-[#9AA9C2]">
+              Berikut ini beberapa proyek yang telah saya buat.
+            </p>
+            <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {listProyek.map((proyek) => (
+                <article
+                  key={proyek.id}
+                  className="flex flex-col rounded-2xl border border-[#263754] bg-[#16233A] p-3"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay={proyek.dad}
+                >
+                  <img
+                    src={proyek.gambar}
+                    alt={`Tampilan proyek ${proyek.nama}`}
+                    className="aspect-video w-full rounded-xl object-cover"
+                    loading="lazy"
+                  />
+                  <div className="flex flex-1 flex-col p-3">
+                    <h3 className="mb-2 mt-2 text-xl font-bold">
+                      {proyek.nama}
+                    </h3>
+                    <p className="mb-4 text-sm leading-relaxed text-[#9AA9C2]">
+                      {proyek.desk}
+                    </p>
+                    <div className="mb-6 flex flex-wrap gap-2">
+                      {proyek.tools.map((tool, index) => (
+                        <span
+                          key={index}
+                          className="rounded-full border border-[#263754] bg-[#0E1726] px-3 py-1 text-xs font-medium text-[#5CCBF2]"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
                     <a
-                      href=""
-                      className="bg-blue-600 p-3 rounded-lg block border border-zinc-600 hover:bg-blue-700"
+                      href={proyek.link ?? "#"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`mt-auto block rounded-xl border border-[#FFC83D] px-4 py-3 text-center font-semibold text-[#FFC83D] transition-colors hover:bg-[#FFC83D] hover:text-[#0E1726] ${fokus}`}
                     >
                       Lihat Website
                     </a>
                   </div>
-                </div>
-              </div>
-            ))}
+                </article>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-      {/* Proyek */}
+      </section>
 
-      {/* Kontak */}
-      <div className="kontak sm:p-10 p-0 scroll-mt-24 bg-white " id="kontak">
-        <div className="container mx-auto px-4 ">
-          <h1
-            className="text-4xl mb-2 font-bold text-center text-black"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            Kontak
-          </h1>
-          <p
-            className="text-base/loose text-center mb-10 opacity-70 text-black"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-          >
-            Mari terhubung dengan saya.
-          </p>
-          <form
-            action="https://formsubmit.co/thofahesaal@gmail.com"
-            method="POST"
-            className="bg-zinc-800 p-10 sm:w-fit w:full mx-auto rounded-md"
-            autoComplete="of"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="500"
-          >
-            <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-2">
-                <label className="font-semibold">Nama Lengkap</label>
-                <input
-                  type="text"
-                  name="nama"
-                  placeholder="Masukan Nama..."
-                  className="border border-zinc-500 p-2 rounded-md text-grey-200"
-                  required
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="font-semibold">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Masukan Email..."
-                  className="border border-zinc-500 p-2 rounded-md"
-                  required
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="pesan" className="font-semibold">
-                  Pesan
-                </label>
-                <textarea
-                  id="pesan"
-                  name="pesan"
-                  cols="45"
-                  rows="7"
-                  placeholder="Pesan..."
-                  className="border border-zinc-500 p-2 rounded-md"
-                  required
-                ></textarea>
-              </div>
-              <div className="text-center">
+      {/* Kontak dan email (gaya paste 2) */}
+      <section
+        id="kontak"
+        className="scroll-mt-24 bg-[#EAF0F7] py-24 text-[#0E1726]"
+      >
+        <div className="container mx-auto px-4">
+          <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-2">
+            <div data-aos="fade-up" data-aos-duration="1000">
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+                Mari terhubung dengan saya
+              </h2>
+              <p className="mb-8 max-w-md leading-relaxed text-[#4A5B75]">
+                Punya proyek, peluang kerja, atau sekadar ingin berdiskusi?
+                Kirim pesan lewat formulir, saya akan membalasnya lewat email.
+              </p>
+              <a
+                href={`mailto:${emailKontak}`}
+                className={`inline-flex items-center gap-3 font-semibold ${fokus}`}
+              >
+                <span className="grid h-11 w-11 place-items-center rounded-full bg-[#FFC83D] text-xl text-[#0E1726]">
+                  <i className="ri-mail-line"></i>
+                </span>
+                {emailKontak}
+              </a>
+            </div>
+
+            <form
+              action={`https://formsubmit.co/${emailKontak}`}
+              method="POST"
+              className="rounded-3xl bg-[#0E1726] p-8 text-[#E8EEF7] sm:p-10"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="nama" className="text-sm font-semibold">
+                    Nama lengkap
+                  </label>
+                  <input
+                    id="nama"
+                    type="text"
+                    name="nama"
+                    autoComplete="name"
+                    placeholder="Masukkan nama..."
+                    className={inputCls}
+                    required
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="email" className="text-sm font-semibold">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    placeholder="Masukkan email..."
+                    className={inputCls}
+                    required
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="pesan" className="text-sm font-semibold">
+                    Pesan
+                  </label>
+                  <textarea
+                    id="pesan"
+                    name="pesan"
+                    rows="6"
+                    placeholder="Tulis pesan..."
+                    className={`${inputCls} resize-y`}
+                    required
+                  ></textarea>
+                </div>
                 <button
                   type="submit"
-                  className="bg-blue-600 p-3 rounded-lg w-full cursor-pointer border border-zinc-600 hover:bg-blue-700"
+                  className={`w-full cursor-pointer rounded-xl bg-[#FFC83D] px-4 py-3.5 font-semibold text-[#0E1726] transition-colors hover:bg-[#FFD76B] ${fokus}`}
                 >
-                  Kirim Pesan
+                  Kirim pesan
                 </button>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
-      {/* Kontak */}
-    </>
+      </section>
+
+    </div>
   );
 }
 
