@@ -88,7 +88,7 @@ function App() {
       </section>
 
       {/* Tentang */}
-      <section className="tentang scroll-mt-24 bg-[#EEF2FA] py-20" id="tentang">
+      <section className="tentang scroll-mt-24 bg-[#1B2742] py-20" id="tentang">
         <div className="container mx-auto px-4">
           <div
             className="mx-auto w-full rounded-3xl bg-[#0D1330] p-8 shadow-xl shadow-indigo-900/10 lg:w-3/4 xl:w-2/3 sm:p-10"
@@ -96,11 +96,7 @@ function App() {
             data-aos-duration="1000"
           >
             <p className="mb-10 text-lg leading-loose text-slate-300">
-              Hi, perkenalkan saya Thofa Hesa Alfauzi, seorang Full Stack Web
-              Developer dan Designer untuk UI/UX Design, Saya percaya bahwa
-              desain dan fungsionalitas harus berjalan beriringan, sehingga
-              setiap proyek yang saya kembangkan tidak hanya terlihat menarik
-              tetapi juga memberikan pengalaman pengguna yang optimal.
+            Saya Thofa Hesa Alfauzi, lulusan D3 Teknik Informatika dengan minat pada PHP Development, Network Engineering, dan IT Infrastructure. Saya memiliki pengalaman dalam pengembangan sistem berbasis web serta konfigurasi dan pemeliharaan perangkat komputer.
             </p>
             <div className="flex items-center justify-between border-t border-white/10 pt-8">
               <img
@@ -130,14 +126,14 @@ function App() {
 
           <div className="tools mt-28">
             <h2
-              className="mb-4 text-4xl font-bold leading-snug text-[#0D1330]"
+              className="mb-4 text-4xl font-bold leading-snug text-white"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
               Tools yang dipakai
             </h2>
             <p
-              className="w-full leading-loose text-slate-600 sm:w-3/4 md:w-2/3 lg:w-2/4 xl:w-2/5"
+              className="w-full leading-loose text-slate-300 sm:w-3/4 md:w-2/3 lg:w-2/4 xl:w-2/5"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="300"
@@ -148,7 +144,7 @@ function App() {
             <div className="tools-box mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {listTools.map((tool) => (
                 <div
-                  className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-teal-400/60 hover:shadow-lg hover:shadow-teal-500/10"
+                  className="group flex items-center gap-3 rounded-2xl border border-[#34425F] bg-[#24314D] p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-teal-400/60 hover:shadow-lg hover:shadow-teal-500/10"
                   key={tool.id}
                   data-aos="fade-up"
                   data-aos-duration="1000"
@@ -157,12 +153,12 @@ function App() {
                   <img
                     src={tool.gambar}
                     alt={tool.nama}
-                    className="w-14 rounded-xl bg-slate-100 p-2 transition-transform duration-300 group-hover:scale-105"
+                    className="w-14 rounded-xl bg-[#33415D] p-2 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div>
-                    <h4 className="font-bold text-[#0D1330]">{tool.nama}</h4>
-                    <p className="text-sm text-slate-500">{tool.ket}</p>
+                    <h4 className="font-bold text-white">{tool.nama}</h4>
+                    <p className="text-sm text-slate-300">{tool.ket}</p>
                   </div>
                 </div>
               ))}
@@ -230,7 +226,7 @@ function App() {
       {/* Kontak dan email (gaya paste 2) */}
       <section
         id="kontak"
-        className="scroll-mt-24 bg-[#EAF0F7] py-24 text-[#0E1726]"
+        className="scroll-mt-24 bg-[#222E47] py-24 text-slate-100"
       >
         <div className="container mx-auto px-4">
           <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-2">
@@ -238,7 +234,7 @@ function App() {
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
                 Mari terhubung dengan saya
               </h2>
-              <p className="mb-8 max-w-md leading-relaxed text-[#4A5B75]">
+              <p className="mb-8 max-w-md leading-relaxed text-slate-300">
                 Punya proyek, peluang kerja, atau sekadar ingin berdiskusi?
                 Kirim pesan lewat formulir, saya akan membalasnya lewat email.
               </p>
@@ -256,7 +252,7 @@ function App() {
             <form
               action={`https://formsubmit.co/${emailKontak}`}
               method="POST"
-              className="rounded-3xl bg-[#0E1726] p-8 text-[#E8EEF7] sm:p-10"
+              className="rounded-3xl border border-white/10 bg-[#121C33] p-8 text-[#E8EEF7] shadow-xl shadow-black/10 sm:p-10"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="200"
